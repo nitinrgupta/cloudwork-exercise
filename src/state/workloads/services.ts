@@ -21,8 +21,9 @@ export class WorkloadService {
   }
 
 
-  public create({ complexity }: { complexity: number }) {
+  public create({ complexity, name }: { complexity: number, name: string }) {
     const id = this.counter++;
+    console.log(name);
     const status: Status = 'WORKING';
     console.log("yo");
     const milliseconds = complexity * 1000;
@@ -31,6 +32,7 @@ export class WorkloadService {
 
     const work: Work = {
       id,
+      name,
       complexity,
       status,
       completeDate,
@@ -38,7 +40,7 @@ export class WorkloadService {
     }
     this.workLoads[id] = work;
 
-    return Promise.resolve({ id, status, complexity, completeDate });
+    return Promise.resolve({ id, name, status, complexity, completeDate });
   }
 
   public checkStatus({ id }: { id: number }) {
@@ -61,6 +63,7 @@ export class WorkloadService {
 
 interface Work {
   id: number;
+  name: string;
   complexity: number;
   completeDate: Date;
   status: Status;

@@ -5,7 +5,7 @@ import { submit } from '../../state/workloads/actions';
 
 
 interface WorkloadFormDispatchProps {
-  submitWorkload: (complexity: number) => void  
+  submitWorkload: (complexity: number, name: string) => void  
 }
 
 interface WorkloadFormProps extends 
@@ -13,17 +13,19 @@ interface WorkloadFormProps extends
 
 interface WorkloadFormState {
   complexity: number;
+  name: string;
 }
 
 class WorkloadForm extends React.PureComponent<WorkloadFormProps, WorkloadFormState> {
   defaultState = {
     complexity: 5,
+    name:''
   }
 
   state = this.defaultState;
 
   handleSubmit = (e: React.MouseEvent) => {
-    this.props.submitWorkload(this.state.complexity);
+    this.props.submitWorkload(this.state.complexity, this.state.name);
     this.setState(this.defaultState);
     e.preventDefault();
   }
@@ -44,6 +46,10 @@ class WorkloadForm extends React.PureComponent<WorkloadFormProps, WorkloadFormSt
               min="1" 
               max="10" 
             />
+            <input
+              value={this.state.name}
+              onChange={(e) => this.setState({ name: String(e.target.value) })}
+              />
           </label>
         </div>
 
@@ -57,7 +63,7 @@ class WorkloadForm extends React.PureComponent<WorkloadFormProps, WorkloadFormSt
 
 
 const mapDispatchToProps = (dispatch: Dispatch): WorkloadFormDispatchProps => ({
-  submitWorkload: (complexity: number) => dispatch(submit({ complexity })),
+  submitWorkload: (complexity: number, name: string) => dispatch(submit({ complexity, name })),
 });
 
 const WorkloadFormContainer = connect(null, mapDispatchToProps)(WorkloadForm);

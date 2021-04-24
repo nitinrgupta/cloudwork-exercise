@@ -9,7 +9,9 @@ export type WorkloadsAction = ActionType<typeof workloadActions>
 
 interface WorkloadEntry<Id extends number> {
   id: Id;
+  name: String;
   complexity: number;
+  createdDate: Date;
   completeDate: Date;
   status: Status;
 }
@@ -29,7 +31,9 @@ export const workloadReducer = (state: WorkloadsState = initialState, action: Wo
         ...state,
         [action.payload.id]: {
           id: action.payload.id,
+          name: action.payload.name,
           complexity: action.payload.complexity,
+          createdDate: action.payload.createdDate,
           completeDate: action.payload.completeDate,
           status: action.payload.status,
         },
