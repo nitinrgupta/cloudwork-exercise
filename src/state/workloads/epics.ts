@@ -8,7 +8,7 @@ import { WorkloadService } from './services';
 
 
 type AppEpic = Epic<RootAction, RootAction, RootState>;
-const workloadService = new WorkloadService
+const workloadService = new WorkloadService();
 
 const logWorkloadSubmissions: AppEpic = (action$, state$) => (
   action$.pipe(
