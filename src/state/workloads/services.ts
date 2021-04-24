@@ -10,6 +10,7 @@ export class WorkloadService {
 
 
   private getWorkload(id: number): Work | undefined {
+    console.log('here');
     return this.workLoads[id];
   }
 
@@ -23,7 +24,7 @@ export class WorkloadService {
   public create({ complexity }: { complexity: number }) {
     const id = this.counter++;
     const status: Status = 'WORKING';
-
+    console.log("yo");
     const milliseconds = complexity * 1000;
     const completeDate = moment().add(complexity, 'second').toDate();
     const timer = setTimeout(() => this.completeWorkload(work), milliseconds);
