@@ -29,6 +29,7 @@ const workloadCancelled: AppEpic = (action$, state$) => (
     tap((payload) => console.log('Workload cancelled', payload)),
     mergeMap(async (action) => {
       const work = await workloadService.cancel(action.payload);
+      console.log(work);
       return workloadsActions.updateStatus(work);
     })
   )
@@ -55,9 +56,6 @@ const workloadCreated: AppEpic = (action$, state$) => (
 
       )
     }),
-    takeUntil(action$.pipe(
-      filter(isActionOf(workloadsActions.cancel))
-    ))
   )
 );
 
@@ -73,6 +71,7 @@ const workloadCheckStatus: AppEpic = (action$, state$) => (
     }),
   )
 );
+
 export const epics = combineEpics(
   workloadSubmitted,
   workloadCancelled,
