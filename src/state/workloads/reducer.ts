@@ -9,6 +9,7 @@ export type WorkloadsAction = ActionType<typeof workloadActions>
 
 interface WorkloadEntry<Id extends number> {
   id: Id;
+  name: String;
   complexity: number;
   completeDate: Date;
   status: Status;
@@ -24,10 +25,12 @@ const initialState: WorkloadsState = {};
 export const workloadReducer = (state: WorkloadsState = initialState, action: WorkloadsAction): WorkloadsState => {
   switch (action.type) {
     case getType(workloadActions.created):
-      return { 
+      console.log('inside created reducer');
+      return {
         ...state,
         [action.payload.id]: {
           id: action.payload.id,
+          name: action.payload.name,
           complexity: action.payload.complexity,
           completeDate: action.payload.completeDate,
           status: action.payload.status,

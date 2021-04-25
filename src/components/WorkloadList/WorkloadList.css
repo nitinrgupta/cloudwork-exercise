@@ -1,0 +1,40 @@
+.workload-list-container {
+	width: 450px;
+	background: #000000;
+	border: 1px solid #333333;
+	box-sizing: border-box;
+	border-radius: 4px;
+	display: flex;
+	flex-direction: column;
+	padding: 24px;
+	min-height: 600px;
+}
+
+.list-header {
+	margin-top: 0;
+	padding-bottom: 20px;
+	display: flex;
+	justify-content: space-between;
+	border-bottom: 1px solid #333333;
+}
+
+.list-container {
+	display: flex;;
+}
+
+.workload-list {
+	display: flex; 
+	flex-direction: column-reverse;
+}
+.cancelled-text {
+	font-size: 10px;
+	font-weight: 600;
+	text-transform: uppercase;
+	color: red;
+	opacity: 0.7;
+}
+
+.empty-list {
+	margin-top: 40px;
+	text-align: center;
+}
