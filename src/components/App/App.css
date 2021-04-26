@@ -38,7 +38,6 @@
 .header-container {
 	width: 100%;
 	display: flex;
-	padding: 40px 0 64px 0;
 	flex-direction: column;
 	justify-content: flex-start;
 	background-color: #000000;
@@ -48,10 +47,14 @@
 
 .header-inner-container {
 	min-width: 850px;
-	padding: 24px;
+	padding: 80px 24px 100px 24px;
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
+	background-image: url(https://res.cloudinary.com/ds24tivvl/image/upload/v1619416018/Cloudworks/Group_22.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: right;
 }
 
 .action-container {
