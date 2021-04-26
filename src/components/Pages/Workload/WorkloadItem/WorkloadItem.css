@@ -84,3 +84,10 @@
 	0% { opacity: 1;}
 	100% { opacity: 0;}
 }
+
+@media only screen and (max-width : 468px) {
+	.workloadItem-subHeading {
+		font-size: 13px;
+		
+	}
+}
