@@ -1,6 +1,4 @@
 .workloadItem {
-	background: #111111;
-	border: 1px solid #333333;
 	box-sizing: border-box;
 	border-radius: 4px;
 	margin-bottom: 24px;
@@ -8,6 +6,21 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	position: relative;
+	animation: newlyAdded 1s;
+	animation-fill-mode: forwards;
+}
+
+
+@keyframes newlyAdded {
+	0% { 
+		background: #282828;
+		border: 1px solid #818181;
+	}
+	100% {
+		background: #111111;
+		border: 1px solid #333333;
+	}
 }
 
 .workloadItem-textContainer {
@@ -50,4 +63,24 @@
 	padding-left: 24px;
 	justify-content: flex-end;
 	flex-flow: row-reverse wrap;
+}
+
+
+.new-workload-notif {
+	background-color: #2972EA;
+	height: 10px;
+	width: 10px;
+	border-radius: 10px;
+	position: absolute;
+	top: -5px;
+	right: -5px;
+	display: block;
+	animation: fadeOut 500ms;
+	animation-delay: 3s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes fadeOut {
+	0% { opacity: 1;}
+	100% { opacity: 0;}
 }

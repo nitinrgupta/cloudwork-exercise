@@ -39,6 +39,7 @@ const WorkloadItem: React.SFC<WorkloadItemProps> = (props) => {
   };
   return (
     <div className="workloadItem">
+      <span className="new-workload-notif"></span>
       <div className="workloadItem-textContainer">
         <h3 className="workloadItem-heading margin-0">{props.name? props.name : 'Workload #' + Number(props.id+1)}</h3>
         <p className="workloadItem-subHeading">
