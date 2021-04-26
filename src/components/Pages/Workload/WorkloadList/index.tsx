@@ -1,8 +1,8 @@
 import React from 'react';
 import { Dispatch } from 'redux';
 import { connect } from 'react-redux';
-import { RootAction, RootState } from '../../state';
-import { cancel, checkStatus } from '../../state/workloads/actions';
+import { RootAction, RootState } from '../../../../state';
+import { cancel, checkStatus } from '../../../../state/workloads/actions';
 import { WorkloadItem, WorkloadItemStateProps } from '../WorkloadItem';
 import './WorkloadList.css';
 

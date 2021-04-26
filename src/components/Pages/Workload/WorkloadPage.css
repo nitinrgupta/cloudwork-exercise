@@ -1,0 +1,36 @@
+.page-container {
+  padding: 0 40px 40px 40px;
+  background-color: #111111;
+  display: flex;
+  justify-content: center;
+}
+
+
+.page-innerContainer {
+  width: 100%;
+  display: flex;
+  margin-top: -54px;
+  justify-content: center;
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 768px) {
+  .page-container {
+    padding: 0 20px 20px 20px;
+  }
+
+  .page-innerContainer {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width : 1024px) {
+  .page-container {
+    padding: 0 20px 20px 20px;
+  }
+}
+
+/* Desktops and laptops ----------- */
+@media only screen  and (min-width : 1224px) {
+/* Styles */
+}

@@ -1,5 +1,4 @@
 .workload-list-container {
-	width: 450px;
 	background: #000000;
 	border: 1px solid #333333;
 	box-sizing: border-box;
@@ -45,4 +44,19 @@
 .empty-list {
 	margin-top: 40px;
 	text-align: center;
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 768px) {
+	.workload-list-container {
+    padding: 0 20px;
+    height: 100%;
+    overflow: auto;
+	}
+}
+
+@media only screen and (min-width : 768px) {
+  .workload-list-container {
+    width: 400px;
+	}
 }
