@@ -6,16 +6,22 @@
 	border-radius: 4px;
 	display: flex;
 	flex-direction: column;
-	padding: 24px;
-	min-height: 600px;
+	height: 600px;
+	overflow-y: scroll;
 }
 
 .list-header {
 	margin-top: 0;
-	padding-bottom: 20px;
-	display: flex;
+	padding: 24px;
 	justify-content: space-between;
 	border-bottom: 1px solid #333333;
+	display: flex;
+	position: sticky;
+	top: 0;
+	background: black;
+	z-index: 99999;
+	background: #000000;
+	box-shadow: 0px 10px 13px #000000;
 }
 
 .list-container {
@@ -25,6 +31,7 @@
 .workload-list {
 	display: flex; 
 	flex-direction: column-reverse;
+	padding: 20px 24px 24px 24px;
 }
 .cancelled-text {
 	font-size: 10px;

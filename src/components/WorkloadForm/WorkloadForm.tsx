@@ -33,10 +33,9 @@ class WorkloadForm extends React.PureComponent<WorkloadFormProps, WorkloadFormSt
   render() {
     return (
       <div className="create-workload-container">
-        <form>
-          <h3 className="form-header">Create a new workload</h3>
-          <hr />
-          <div className="form-container">
+        <h3 className="form-header">Create a new workload</h3>
+        <form className="form-container">
+          <div>
             <input
               type="text"
               value={this.state.name}

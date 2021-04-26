@@ -53,7 +53,6 @@ const workloadCreated: AppEpic = (action$, state$) => (
           console.log(workload)
           return workload.status === 'WORKING';
         })
-
       )
     }),
   )
