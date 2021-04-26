@@ -1,6 +1,6 @@
 import React from 'react';
 import Countdown from 'react-countdown';
-import { Status } from '../../state/workloads'
+import { Status } from '../../../../state/workloads'
 import './WorkloadItem.css';
 
 

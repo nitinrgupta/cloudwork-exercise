@@ -1,7 +1,7 @@
 import React from 'react';
 import { Dispatch } from 'redux';
 import { connect } from 'react-redux';
-import { submit } from '../../state/workloads/actions';
+import { submit } from '../../../../state/workloads/actions';
 import './WorkloadForm.css';
 
 interface WorkloadFormDispatchProps {
