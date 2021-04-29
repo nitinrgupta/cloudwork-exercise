@@ -15,16 +15,16 @@
 
 .page-innerContainer > div {
   opacity: 0;
-  animation: entry 300ms forwards;
+  animation: entry 800ms forwards;
   transform: translateY(10px);
 }
 
 .page-innerContainer >div:nth-child(1) { 
-  animation-delay: 150ms;
+  animation-delay: 300ms;
 }
 
 .page-innerContainer >div:nth-child(2) { 
-  animation-delay: 200ms;
+  animation-delay: 350ms;
 }
 
 
