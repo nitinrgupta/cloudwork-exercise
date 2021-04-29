@@ -13,6 +13,31 @@
   justify-content: center;
 }
 
+.page-innerContainer > div {
+  opacity: 0;
+  animation: entry 300ms forwards;
+  transform: translateY(10px);
+}
+
+.page-innerContainer >div:nth-child(1) { 
+  animation-delay: 150ms;
+}
+
+.page-innerContainer >div:nth-child(2) { 
+  animation-delay: 200ms;
+}
+
+
+@keyframes entry {
+	0% { 
+		opacity: 0;
+	}
+	100% {
+    opacity: 1;
+    transform: translateY(-10px);
+	}
+}
+
 /* Smartphones (portrait) ----------- */
 @media only screen and (max-width : 768px) {
   .page-container {

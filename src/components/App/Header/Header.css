@@ -15,6 +15,42 @@
 	background-position: right;
 }
 
+.header-inner-container h1 {
+  opacity: 0;
+  transition: all 300ms ease-in-out;
+  animation: entry-header 350ms forwards;
+  animation-delay: 50ms ;
+  transform: translateY(10px);
+}
+.header-inner-container p {
+  opacity: 0;
+  animation: entry-description 300ms forwards;
+  animation-delay: 100ms;
+  transform: translateY(10px);
+}
+
+
+@keyframes entry-header {
+	0% { 
+		opacity: 0;
+	}
+	100% {
+    opacity: 1;
+    transform: translateY(-10px);
+	}
+}
+
+
+@keyframes entry-description {
+	0% { 
+		opacity: 0;
+	}
+	100% {
+    opacity: 0.6;
+    transform: translateY(-10px);
+	}
+}
+
 /* Smartphones (portrait) ----------- */
 @media only screen and (max-width : 768px) {
   .header-container {
